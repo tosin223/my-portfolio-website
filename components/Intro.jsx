@@ -12,7 +12,7 @@ import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -73,12 +73,12 @@ export default function Intro() {
         <Link
           href="#contact"
           onClick={() => {
-            setActiveSection('Contact');
-            setTimeOfLastClick(Date.now())
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
           }}
           className="group outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition bg-gray-900 text-white px-7 py-3 flex gap-2 items-center rounded-full"
         >
-          Contact Me{" "}
+          Contact Me
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -86,7 +86,7 @@ export default function Intro() {
           download
           className="group outline-none bg-white px-7 py-3 flex gap-2 items-center rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10 dark:bg-white/10"
         >
-          Download CV{" "}
+          Download CV
           <HiDownload className="opacity-70 group-hover:translate-y-1 transition" />
         </a>
         <div className="flex gap-2">
@@ -104,11 +104,8 @@ export default function Intro() {
           >
             <FaGithubSquare />
           </a>
-
         </div>
-       
       </motion.div>
     </section>
   );
 }
-// https://www.linkedin.com/in/tosin-akinsemoyin1
